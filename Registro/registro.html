@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Practica Validacion</h1>
+        <h2>Formulario de registro...</h2>
+        <form action="" method="get">
+            <label for="name">Nombre de usuario : </label><br>
+            <input type="text" name="name" 
+            id="name" placeholder="Usuario"
+            maxlength="25" pattern="[A-Za-z0-9]{5,15}" title="Letras y numeros. 5 a 15 Caracteres" required ><br>
+
+            <label for="pass">Contraseña : </label><br>
+            <input type="password" name="pass" id="pass"
+            placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+            title="Debe conetener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una minúscula, un número y un carácter especial (@$!%*?&)" 
+            required><br>
+
+            <label for="email">Email : </label><br>
+            <input type="email" name="email" id="email" required
+            placeholder="example@example.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Debe llevar @, ademas del dominio '.com', '.org', etc."><br>
+
+            <label for="tel">Telefono : </label><br>
+            <input type="tel" maxlength="10" minlength="10" 
+            placeholder="Numero de 10 caracteres" pattern="^\+[1-9]\d{1,14}$" title="Debe llevar el codigo internacional de tu pais"><br>
+
+            <label for="fch">Fecha de nacimiento : </label><br>
+            <input type="date" name="fch" pattern="^(\d{2})(\/\-)(\d{2})(\/\-)(\d{4})$" required><br>
+
+            <label for="CP">Codigo postal :</label><br>
+            <input type="text" name="CP" pattern="[0-9]{5}" title="Deben ser 5 digitos">
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

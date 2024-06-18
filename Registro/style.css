@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#466EE3, #469FE3, #5146E3);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.title{
+    font-size: 50px;
+    font-weight: bold;
+}
+form{
+    width: 90%;
+}
+input{
+    font-size: 18px;
+    width: 75%;
+    padding: .5%;
+    border-radius: 1.5rem;
+    border: 2px #ddd solid;
+    margin: 1%;
+}
+input:valid{
+    color: #2fa529;
+}
+input:invalid{
+    color: #ff002b;
+}
